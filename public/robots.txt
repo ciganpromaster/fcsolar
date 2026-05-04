@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemapa
+Sitemap: https://fotovoltikaslovensko.com/sitemap.xml
+
+# Blokovat admin sekcie
+Disallow: /node_modules/
+Disallow: /src/
