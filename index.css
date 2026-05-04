@@ -71,7 +71,7 @@ body {
   height: 100%;
   background: var(--text-muted);
   border-radius: 3px;
-  animation: cableStretch 2.5s ease-in-out forwards;
+  animation: cableStretch 1.5s ease-in-out forwards;
 }
 
 .plug {
@@ -79,7 +79,7 @@ body {
   left: 10%;
   color: var(--text-muted);
   font-size: 1.8rem;
-  animation: plugMove 2.5s ease-in-out forwards;
+  animation: plugMove 1.5s ease-in-out forwards;
 }
 
 @keyframes cableStretch {
@@ -238,11 +238,11 @@ nav {
   justify-content: center;
   background: var(--primary);
   color: #fff;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 900;
   letter-spacing: 1px;
-  padding: 0.25rem 0.55rem;
-  border-radius: 8px;
+  padding: 0.2rem 0.45rem;
+  border-radius: 6px;
   line-height: 1;
   box-shadow: 0 0 12px rgba(16, 185, 129, 0.5);
   transition: box-shadow 0.3s;
@@ -743,4 +743,48 @@ footer {
     letter-spacing: 0.8px;
     border: 1px solid rgba(16, 185, 129, 0.2);
     line-height: 1;
+}
+
+/* ==========================================
+   Hero Slider
+   ========================================== */
+.hero-slider { position: relative; width: 100%; height: 400px; overflow: hidden; border-radius: 16px; }
+.hero-slider img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out; }
+.hero-slider img.active { opacity: 1; }
+
+/* ==========================================
+   Mobile Tab Navigation
+   ========================================== */
+.mobile-tab-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--glass-border);
+    z-index: 1000;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+.tab-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.8rem 0;
+    font-size: 0.75rem;
+    gap: 0.3rem;
+    transition: color 0.3s;
+    min-height: 56px;
+}
+.tab-item i { font-size: 1.2rem; }
+.tab-item:hover, .tab-item:active { color: var(--primary); }
+
+@media (max-width: 900px) {
+    .mobile-tab-nav { display: flex; }
+    footer { padding-bottom: 6rem; }
 }

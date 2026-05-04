@@ -6,7 +6,7 @@
  *   1. Sign up free at https://resend.com
  *   2. In Vercel dashboard → Project → Settings → Environment Variables
  *      add: RESEND_API_KEY = re_xxxxxxxxxx  (from Resend dashboard)
- *   3. Optional: verify fotovoltikaslovensko.com in Resend to send FROM your domain
+ *   3. Optional: verify fotovoltaikaslovensko.com in Resend to send FROM your domain
  */
 
 export default async function handler(req, res) {
@@ -19,6 +19,8 @@ export default async function handler(req, res) {
     name = '',
     email = '',
     phone = '',
+    message = '',
+    gdpr = '',
     website = '',   // honeypot field — must be empty
   } = req.body || {};
 
@@ -45,6 +47,16 @@ export default async function handler(req, res) {
        <td style="padding:6px 12px;">${phone}</td></tr>`
     : '';
 
+  const messageRow = message.trim()
+    ? `<tr><td style="padding:6px 12px;color:#6b7280;font-weight:600;">Správa / Message</td>
+       <td style="padding:6px 12px;white-space:pre-wrap;">${message}</td></tr>`
+    : '';
+
+  const gdprRow = gdpr
+    ? `<tr><td style="padding:6px 12px;color:#6b7280;font-weight:600;">GDPR</td>
+       <td style="padding:6px 12px;">Súhlas udelený / Consent granted</td></tr>`
+    : '';
+
   const html = `
 <!DOCTYPE html><html lang="sk"><head><meta charset="UTF-8"></head>
 <body style="margin:0;padding:0;background:#f3f4f6;font-family:Arial,sans-serif;">
@@ -55,7 +67,7 @@ export default async function handler(req, res) {
         <tr>
           <td style="background:linear-gradient(135deg,#064e3b,#10b981);padding:28px 32px;">
             <h1 style="margin:0;color:#fff;font-size:22px;">FC Solar</h1>
-            <p style="margin:4px 0 0;color:#a7f3d0;font-size:13px;">fotovoltikaslovensko.com</p>
+            <p style="margin:4px 0 0;color:#a7f3d0;font-size:13px;">fotovoltaikaslovensko.com</p>
           </td>
         </tr>
         <tr>
@@ -65,7 +77,7 @@ export default async function handler(req, res) {
               <span style="color:#10b981;">${name}</span>
             </h2>
             <p style="margin:0 0 24px;color:#6b7280;font-size:14px;">
-              ${isEN ? 'Submitted via fotovoltikaslovensko.com' : 'Odoslané cez fotovoltikaslovensko.com'}
+              ${isEN ? 'Submitted via fotovoltaikaslovensko.com' : 'Odoslané cez fotovoltaikaslovensko.com'}
             </p>
             <table width="100%" cellpadding="0" cellspacing="0"
                    style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;border-collapse:collapse;">
@@ -80,6 +92,8 @@ export default async function handler(req, res) {
                 </td>
               </tr>
               ${phoneRow}
+              ${messageRow}
+              ${gdprRow}
             </table>
             <p style="margin:24px 0 0;font-size:13px;color:#9ca3af;">
               ${isEN
@@ -91,7 +105,7 @@ export default async function handler(req, res) {
         <tr>
           <td style="padding:16px 32px;background:#f9fafb;border-top:1px solid #e5e7eb;">
             <p style="margin:0;font-size:11px;color:#9ca3af;text-align:center;">
-              © 2026 FC Solar s.r.o. · fotovoltikaslovensko.com
+              © 2026 Galaxion · fotovoltaikaslovensko.com
             </p>
           </td>
         </tr>
@@ -108,7 +122,7 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'FC Solar <info@fotovoltikaslovensko.com>',
+        from: 'FC Solar <info@fotovoltaikaslovensko.com>',
         to: ['ahoj.projekty@gmail.com'],
         reply_to: email,
         subject,

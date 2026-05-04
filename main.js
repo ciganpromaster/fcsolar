@@ -23,7 +23,7 @@ function hideLoader() {
 setTimeout(() => {
     if (document.readyState === 'complete') { hideLoader(); }
     else { window.addEventListener('load', hideLoader); setTimeout(hideLoader, 3000); }
-}, 2500);
+}, 800);
 
 // ==========================================
 // 2. Header Scroll Effect
@@ -86,14 +86,18 @@ const translations = {
         hero_cta2: "Zistiť viac",
         why_title: "Prečo si vybrať FC Solar?",
         why_subtitle: "Prinášame inovatívny prístup k solárnej energii s ohľadom na životné prostredie a vašu peňaženku.",
-        card1_title: "Smart technológie",
-        card1_desc: "Ovládajte svoju spotrebu pomocou inteligentnej aplikácie priamo z vášho mobilu nech ste kdekoľvek.",
-        card2_title: "Dotácie na kľúč",
-        card2_desc: "Získajte štátnu podporu z programu Zelená domácnostiam bez starostí. Všetku byrokraciu vyriešime za vás.",
-        firmy_title: "Riešenia pre firmy",
-        firmy_subtitle: "Znížte prevádzkové náklady vašej firmy vďaka vlastnej slnečnej elektrárni.",
-        firmy_h3: "Energetická nezávislosť pre váš biznis",
-        firmy_p1: "Priemyselné a komerčné inštalácie navrhujeme s dôrazom na rýchlu návratnosť investície a maximálny výkon.",
+        card1_title: "Skúsenosti a odbornosť",
+        card1_desc: "Viacročné skúsenosti a stovky zrealizovaných projektov po celom Slovensku zaručujú profesionálny prístup.",
+        card2_title: "Vysoké štandardy kvality",
+        card2_desc: "Používame len overené a certifikované komponenty od špičkových svetových výrobcov pre maximálnu životnosť.",
+        card3_title: "Riešenia na kľúč (A po Z)",
+        card3_desc: "Od návrhu, cez byrokraciu až po inštaláciu a revíziu. Zabezpečujeme kompletný servis bez starostí.",
+        card4_title: "Vybavenie dotácií",
+        card4_desc: "Sme registrovaní zhotovitelia. Vybavíme za vás celú administratívu pre získanie dotácií Zelená domácnostiam.",
+        firmy_title: "Riešenia pre domácnosti a firmy",
+        firmy_subtitle: "Znížte svoje náklady vďaka vlastnej slnečnej elektrárni.",
+        firmy_h3: "Energetická nezávislosť pre váš domov aj biznis",
+        firmy_p1: "Inštalácie pre domácnosti aj komerčné priestory navrhujeme s dôrazom na rýchlu návratnosť investície a maximálny výkon.",
         firmy_bullet1: "Optimalizácia nákladov",
         firmy_bullet2: "Zelené ESG reportovanie",
         firmy_bullet3: "Ochrana pred výkyvmi cien energií",
@@ -109,9 +113,11 @@ const translations = {
         contact_name: "Meno a Priezvisko",
         contact_email: "E-mailová adresa",
         contact_phone: "Telefónne číslo",
+        contact_message: "Vaša správa alebo popis dopytu",
+        contact_gdpr: "Súhlasím so spracovaním osobných údajov za účelom vybavenia dopytu.",
         contact_btn: "Odoslať nezáväzný dopyt",
         footer_slogan: "Zelenšia budúcnosť pre Slovensko",
-        footer_copyright: "&copy; 2026 FC Solar s.r.o. Všetky práva vyhradené.",
+        footer_copyright: "&copy; 2026 Galaxion. Všetky práva vyhradené.",
         showcase_title: "Naše inštalácie po celom Slovensku",
         showcase_subtitle: "Pozrite si naše projekty v najväčších slovenských mestách a zistite, prečo nám dôverujú stovky klientov.",
         city_ba: "Bratislava a okolie",
@@ -139,16 +145,16 @@ const translations = {
         grid_ke: "Východoslovenská distribučná",
         grid_za: "Stredoslovenská distribučná",
         seo_siea_title: "Kto administruje dotácie (SIEA)",
-        seo_siea_desc: "Priame štátne dotácie na solárne panely pre domácnosti a firmy nie sú poskytované súkromnou firmou, ale spravuje ich <strong>Slovenská inovačná a energetická agentúra (SIEA)</strong>. Domácnosti môžu využiť projekt <strong>Zelená domácnostiam</strong>, zatiaľ čo firmy projekt <strong>Zelená podnikom</strong>. Dotácia vám výrazne zníži počiatočnú investíciu (cca 7 500 € pre domácnosť, 10 000+ € pre firmy).",
+        seo_siea_desc: "Priame štátne dotácie na solárne panely pre domácnosti a firmy nie sú poskytované súkromnou firmou, ale spravuje ich <strong>Slovenská inovačná a energetická agentúra (SIEA)</strong>. Domácnosti môžu využiť projekt <strong>Zelená domácnostiam</strong>, zatiaľ čo firmy projekt <strong>Zelená podnikom</strong>. Dotácia vám výrazne zníži počiatočnú investíciu (až do 4 050 € pre domácnosť, až do 50 000 € pre firmy).",
         seo_contact_title: "Koho kontaktovať a certifikácie",
-        seo_contact_desc_ba_nr: "Odporúča sa kontaktovať certifikovaných zhotoviteľov registrovaných v SIEA. Medzi najväčších hráčov v regióne patria <strong>ZSE (E.ON), EcoSuncapital, Solid Sun</strong>. Pred podpisom zmluvy je nevyhnutné, aby spoločnosť overila rezervovanú kapacitu na pripojenie u vášho distribútora – <strong>ZSDIS</strong>. Taktiež nezabudnite, že pre domácnosť potrebujete list vlastníctva k rodinnému domu.",
-        seo_contact_desc_ke: "Odporúča sa kontaktovať certifikovaných zhotoviteľov registrovaných v SIEA. Medzi najväčších hráčov v regióne patria <strong>VSE (Innogy), Antik Telecom (fotovoltaika)</strong>. Pred podpisom zmluvy je nevyhnutné, aby spoločnosť overila rezervovanú kapacitu na pripojenie u vášho distribútora – <strong>VSD</strong>.",
-        seo_contact_desc_za: "Odporúča sa kontaktovať certifikovaných zhotoviteľov registrovaných v SIEA. Medzi najväčších hráčov v regióne patria <strong>SSE (Stredoslovenská energetika), GreenLogos</strong>. Pred podpisom zmluvy je nevyhnutné, aby spoločnosť overila rezervovanú kapacitu na pripojenie u vášho distribútora – <strong>SSD</strong>.",
+        seo_contact_desc_ba_nr: "Odporúča sa kontaktovať certifikovaných zhotoviteľov registrovaných v SIEA. Pred podpisom zmluvy je nevyhnutné, aby spoločnosť overila rezervovanú kapacitu na pripojenie u vášho distribútora – <strong>ZSDIS</strong>. Zabezpečte si partnera s platnými elektrotechnickými certifikáciami. Taktiež nezabudnite, že pre domácnosť potrebujete list vlastníctva k rodinnému domu.",
+        seo_contact_desc_ke: "Odporúča sa kontaktovať certifikovaných zhotoviteľov registrovaných v SIEA. Pred podpisom zmluvy je nevyhnutné, aby spoločnosť overila rezervovanú kapacitu na pripojenie u vášho distribútora – <strong>VSD</strong>. Zabezpečte si partnera s platnými elektrotechnickými certifikáciami.",
+        seo_contact_desc_za: "Odporúča sa kontaktovať certifikovaných zhotoviteľov registrovaných v SIEA. Pred podpisom zmluvy je nevyhnutné, aby spoločnosť overila rezervovanú kapacitu na pripojenie u vášho distribútora – <strong>SSD</strong>. Zabezpečte si partnera s platnými elektrotechnickými certifikáciami.",
         business_solutions_title: "Riešenia pre firmy v regióne",
         business_solutions_desc: "Firmy ušetria rýchlejšie vďaka drahšej elektrine (návratnosť bez dotácie 6 - 8 rokov). Cez <strong>Zelená podnikom</strong> Vám preplatia aj energetický audit.",
         roi_business_label: "Rokov návratnosť s dotáciou",
         gallery_in_images: "v obrazoch",
-        gallery_desc: "Realizované inštalácie FC Solar v regióne.",
+        gallery_desc: "Riešenia v regióne.",
         calc_title: "Vypočítajte si úsporu pre váš dom",
         calc_desc: "Naši experti vám pripravia presný výpočet návratnosti pre vašu nehnuteľnosť.",
         city_around: "a okolie",
@@ -156,10 +162,10 @@ const translations = {
         nr_h1: "Fotovoltaika Nitra",
         ke_h1: "Fotovoltaika Košice",
         za_h1: "Fotovoltaika Žilina",
-        ba_p: "Zistite, koľko môžete ušetriť s vlastnou solárnou elektrárňou. Prestavte si život bez faktúr za elektrinu. S FC Solar dosiahnete v regióne Bratislava návratnosť, ktorá dáva zmysel od prvého dňa.",
-        nr_p: "Zistite, koľko môžete ušetriť s vlastnou solárnou elektrárňou. Prestavte si život bez faktúr za elektrinu. S FC Solar dosiahnete v regióne Nitra návratnosť, ktorá dáva zmysel od prvého dňa.",
-        ke_p: "Zistite, koľko môžete ušetriť s vlastnou solárnou elektrárňou. Prestavte si život bez faktúr za elektrinu. S FC Solar dosiahnete v regióne Košice návratnosť, ktorá dáva zmysel od prvého dňa.",
-        za_p: "Zistite, koľko môžete ušetriť s vlastnou solárnou elektrárňou. Prestavte si život bez faktúr za elektrinu. S FC Solar dosiahnete v regióne Žilina návratnosť, ktorá dáva zmysel od prvého dňa.",
+        ba_p: "Zistite, koľko môžete ušetriť s vlastnou solárnou elektrárňou. S FC Solar dosiahnete v regióne Bratislava návratnosť, ktorá dáva zmysel od prvého dňa.",
+        nr_p: "Zistite, koľko môžete ušetriť s vlastnou solárnou elektrárňou. S FC Solar dosiahnete v regióne Nitra návratnosť, ktorá dáva zmysel od prvého dňa.",
+        ke_p: "Zistite, koľko môžete ušetriť s vlastnou solárnou elektrárňou. S FC Solar dosiahnete v regióne Košice návratnosť, ktorá dáva zmysel od prvého dňa.",
+        za_p: "Zistite, koľko môžete ušetriť s vlastnou solárnou elektrárňou. S FC Solar dosiahnete v regióne Žilina návratnosť, ktorá dáva zmysel od prvého dňa.",
         calc_desc_ba: "Naši experti pre región Bratislava vám pripravia presný výpočet návratnosti pre vašu nehnuteľnosť.",
         calc_desc_nr: "Naši experti pre región Nitra vám pripravia presný výpočet návratnosti pre vašu nehnuteľnosť.",
         calc_desc_ke: "Naši experti pre región Košice vám pripravia presný výpočet návratnosti pre vašu nehnuteľnosť.",
@@ -178,14 +184,18 @@ const translations = {
         hero_cta2: "Learn more",
         why_title: "Why choose FC Solar?",
         why_subtitle: "We bring an innovative approach to solar energy with respect to the environment and your wallet.",
-        card1_title: "Smart Technology",
-        card1_desc: "Control your consumption using an intelligent app directly from your smartphone wherever you are.",
-        card2_title: "Turnkey Subsidies",
-        card2_desc: "Get state support without the hassle. We handle all the bureaucracy for you.",
-        firmy_title: "Commercial Solutions",
-        firmy_subtitle: "Reduce your company's operating costs with your own solar power plant.",
-        firmy_h3: "Energy independence for your business",
-        firmy_p1: "We design industrial and commercial installations with an emphasis on rapid return on investment and maximum performance.",
+        card1_title: "Experience and expertise",
+        card1_desc: "Years of experience and hundreds of completed projects across Slovakia guarantee a professional approach.",
+        card2_title: "High quality standards",
+        card2_desc: "We use only verified and certified components from top global manufacturers for maximum lifespan.",
+        card3_title: "Turnkey solutions (A to Z)",
+        card3_desc: "From design and bureaucracy to installation and revision. We provide a complete hassle-free service.",
+        card4_title: "Subsidy assistance",
+        card4_desc: "We handle all the paperwork to get you the state subsidies without any effort on your part.",
+        firmy_title: "Solutions for households and businesses",
+        firmy_subtitle: "Reduce your costs with your own solar power plant.",
+        firmy_h3: "Energy independence for your home and business",
+        firmy_p1: "We design residential and commercial installations with an emphasis on rapid return on investment and maximum performance.",
         firmy_bullet1: "Cost optimization",
         firmy_bullet2: "Green ESG reporting",
         firmy_bullet3: "Protection against energy price fluctuations",
@@ -201,9 +211,11 @@ const translations = {
         contact_name: "Full Name",
         contact_email: "Email Address",
         contact_phone: "Phone Number",
+        contact_message: "Your message or inquiry description",
+        contact_gdpr: "I consent to the processing of personal data for the purpose of handling my inquiry.",
         contact_btn: "Send non-binding inquiry",
         footer_slogan: "A greener future for Slovakia",
-        footer_copyright: "&copy; 2026 FC Solar s.r.o. All rights reserved.",
+        footer_copyright: "&copy; 2026 Galaxion. All rights reserved.",
         showcase_title: "Our Installations Across Slovakia",
         showcase_subtitle: "Check out our projects in major Slovak cities and discover why hundreds of clients trust us.",
         city_ba: "Bratislava Region",
@@ -231,11 +243,11 @@ const translations = {
         grid_ke: "East Slovak Distribution",
         grid_za: "Central Slovak Distribution",
         seo_siea_title: "Who administers the subsidies (SIEA)",
-        seo_siea_desc: "Direct state subsidies for solar panels are managed by the <strong>Slovak Innovation and Energy Agency (SIEA)</strong>. Households can use the <strong>Green for Households</strong> project, while businesses use <strong>Green for Businesses</strong>. The subsidy significantly reduces your initial investment (approx. €7,500 for a household, €10,000+ for businesses).",
+        seo_siea_desc: "Direct state subsidies for solar panels are managed by the <strong>Slovak Innovation and Energy Agency (SIEA)</strong>. Households can use the <strong>Green for Households</strong> project, while businesses use <strong>Green for Businesses</strong>. The subsidy significantly reduces your initial investment (up to €4,050 for a household, up to €50,000 for businesses).",
         seo_contact_title: "Who to contact and certifications",
-        seo_contact_desc_ba_nr: "Contact certified contractors registered with SIEA. Key players in the Bratislava region include <strong>ZSE (E.ON), EcoSuncapital, Solid Sun</strong>. Before signing, verify reserved connection capacity with your distributor – <strong>ZSDIS</strong>.",
-        seo_contact_desc_ke: "Contact certified contractors registered with SIEA. Key players in Košice include <strong>VSE (Innogy), Antik Telecom (photovoltaics)</strong>. Before signing, verify reserved connection capacity with your distributor – <strong>VSD</strong>.",
-        seo_contact_desc_za: "Contact certified contractors registered with SIEA. Key players in Žilina include <strong>SSE (Central Slovak Energy), GreenLogos</strong>. Before signing, verify reserved connection capacity with your distributor – <strong>SSD</strong>.",
+        seo_contact_desc_ba_nr: "Contact certified contractors registered with SIEA. Ensure the partner holds valid electrical engineering certifications. Before signing, verify reserved connection capacity with your distributor – <strong>ZSDIS</strong>.",
+        seo_contact_desc_ke: "Contact certified contractors registered with SIEA. Ensure the partner holds valid electrical engineering certifications. Before signing, verify reserved connection capacity with your distributor – <strong>VSD</strong>.",
+        seo_contact_desc_za: "Contact certified contractors registered with SIEA. Ensure the partner holds valid electrical engineering certifications. Before signing, verify reserved connection capacity with your distributor – <strong>SSD</strong>.",
         business_solutions_title: "Solutions for companies in the region",
         business_solutions_desc: "Companies save faster due to more expensive electricity (ROI without subsidy: 6–8 years). Through <strong>Green for Businesses</strong>, they will also reimburse you for an energy audit.",
         roi_business_label: "Years return on investment with subsidy",
@@ -421,3 +433,16 @@ if (document.readyState === 'complete') {
         setTimeout(() => toast.remove(), 500);
     });
 })();
+
+// ==========================================
+// 8. Hero Slider Animation
+// ==========================================
+const heroSlides = document.querySelectorAll('.hero-slider .slide');
+if (heroSlides.length > 0) {
+    let currentHeroSlide = 0;
+    setInterval(() => {
+        heroSlides[currentHeroSlide].classList.remove('active');
+        currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+        heroSlides[currentHeroSlide].classList.add('active');
+    }, 5000);
+}
