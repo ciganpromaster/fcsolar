@@ -259,21 +259,21 @@ nav {
   justify-content: center;
   background: var(--primary);
   color: #fff;
-  font-size: 0.85rem;
+  font-size: 1.8rem;
   font-weight: 900;
   letter-spacing: 1px;
-  padding: 0.2rem 0.45rem;
-  border-radius: 6px;
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
   line-height: 1;
   box-shadow: 0 0 12px rgba(16, 185, 129, 0.5);
   transition: box-shadow 0.3s;
-  margin-right: 0.4rem;
+  margin-right: 0.5rem;
 }
 .logo:hover .logo-fc {
   box-shadow: 0 0 22px rgba(16, 185, 129, 0.8);
 }
 .logo-brand {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #fff;
   letter-spacing: -0.5px;

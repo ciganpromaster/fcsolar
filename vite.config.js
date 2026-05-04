@@ -11,16 +11,16 @@ export default defineConfig({
       input: {
         // Slovak pages
         main:         resolve(__dirname, 'index.html'),
-        bratislava:   resolve(__dirname, 'fotovoltaika-bratislava/index.html'),
-        kosice:       resolve(__dirname, 'fotovoltaika-kosice/index.html'),
-        zilina:       resolve(__dirname, 'fotovoltaika-zilina/index.html'),
-        nitra:        resolve(__dirname, 'fotovoltaika-nitra/index.html'),
+        bratislava:   resolve(__dirname, 'fotovoltika-bratislava/index.html'),
+        kosice:       resolve(__dirname, 'fotovoltika-kosice/index.html'),
+        zilina:       resolve(__dirname, 'fotovoltika-zilina/index.html'),
+        nitra:        resolve(__dirname, 'fotovoltika-nitra/index.html'),
         // English pages
         en:           resolve(__dirname, 'en/index.html'),
-        enBratislava: resolve(__dirname, 'en/fotovoltaika-bratislava/index.html'),
-        enKosice:     resolve(__dirname, 'en/fotovoltaika-kosice/index.html'),
-        enZilina:     resolve(__dirname, 'en/fotovoltaika-zilina/index.html'),
-        enNitra:      resolve(__dirname, 'en/fotovoltaika-nitra/index.html'),
+        enBratislava: resolve(__dirname, 'en/fotovoltika-bratislava/index.html'),
+        enKosice:     resolve(__dirname, 'en/fotovoltika-kosice/index.html'),
+        enZilina:     resolve(__dirname, 'en/fotovoltika-zilina/index.html'),
+        enNitra:      resolve(__dirname, 'en/fotovoltika-nitra/index.html'),
       }
     }
   }
