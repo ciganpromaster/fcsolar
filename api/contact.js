@@ -16,9 +16,9 @@ export default async function handler(req, res) {
   }
 
   const {
-    name    = '',
-    email   = '',
-    phone   = '',
+    name = '',
+    email = '',
+    phone = '',
     website = '',   // honeypot field — must be empty
   } = req.body || {};
 
@@ -83,8 +83,8 @@ export default async function handler(req, res) {
             </table>
             <p style="margin:24px 0 0;font-size:13px;color:#9ca3af;">
               ${isEN
-                ? 'Reply directly to this email to reach the client.'
-                : 'Odpovedzte priamo na tento e-mail — správa bude doručená klientovi.'}
+      ? 'Reply directly to this email to reach the client.'
+      : 'Odpovedzte priamo na tento e-mail — správa bude doručená klientovi.'}
             </p>
           </td>
         </tr>
@@ -108,9 +108,8 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        // Change the `from` to your verified domain once you verify it in Resend
-        from: 'FC Solar <onboarding@resend.dev>',
-        to: ['pro@fotovoltikaslovensko.com'],
+        from: 'FC Solar <info@fotovoltikaslovensko.com>',
+        to: ['ahoj.projekty@gmail.com'],
         reply_to: email,
         subject,
         html,
