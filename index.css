@@ -605,8 +605,20 @@ section {
 
 @media (max-width: 768px) {
   .subsidies-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr; /* Force side-by-side */
+    gap: 0.8rem;
+  }
+  .subsidies-grid > div {
+    padding: 1.2rem !important;
+  }
+  .subsidies-grid h4 {
+    font-size: 1rem !important;
+  }
+  .subsidies-grid ul li {
+    font-size: 0.75rem !important;
+  }
+  .subsidies-grid ul li strong {
+    white-space: nowrap;
   }
 }
 .contact-form input {
