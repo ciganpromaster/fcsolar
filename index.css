@@ -605,43 +605,45 @@ section {
 
 @media (max-width: 768px) {
   .subsidies-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-    align-items: stretch;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   .subsidies-grid > div {
-    padding: 1.2rem 0.5rem !important;
+    padding: 2rem 1.5rem !important;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    text-align: left;
   }
   .subsidies-grid h4 {
-    font-size: 0.8rem !important;
-    line-height: 1.2;
-    margin-bottom: 0.8rem !important;
-    min-height: 2.4rem;
+    font-size: 1.2rem !important;
+    line-height: 1.4;
+    margin-bottom: 1.2rem !important;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 0.8rem;
   }
   .subsidies-grid ul {
-    text-align: center;
+    text-align: left;
     width: 100%;
   }
   .subsidies-grid ul li {
-    font-size: 0.6rem !important;
-    line-height: 1.2;
-    justify-content: center;
+    font-size: 0.95rem !important;
+    line-height: 1.5;
+    justify-content: flex-start;
     display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    white-space: nowrap; /* Force side-by-side */
+    align-items: flex-start;
+    gap: 0.8rem;
   }
   .subsidies-grid ul li i {
-    font-size: 0.55rem;
+    font-size: 0.9rem;
+    margin-top: 4px;
+  }
+  .subsidies-grid ul li strong {
+    white-space: normal;
   }
 }
+
 .contact-form input {
   padding: 1.2rem 1.5rem;
   border-radius: 50px;
