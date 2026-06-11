@@ -122,7 +122,7 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'FC Solar <info@fotovoltikaslovensko.com>',
+        from: 'FC Solar <info@haklenergy.sk>',
         to: ['ahoj.projekty@gmail.com'],
         reply_to: email,
         subject,
